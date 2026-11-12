@@ -1,0 +1,7 @@
+Ebbu2017 PHISH: ['e/', 'php', '.php', '.ph', 'x/', 'hp', 'r/', 'l/'] LEGIT: ['.pd', '.pdf', 'pdf', 'e-', 's-', 'ww', 'df', 's://']
+PhishStorm PHISH: ['php', 'hp', '.php', '.ph', '.com.', 'ph', 'doc', 'com.'] LEGIT: ['ww', '://w', '//w', '.e', '//www', '://ww', '//ww', 'p://w']
+ISCX-URL2016 PHISH: ['ww', '/w', 'w.', '/ww', '/www', 'www', '/www.', 'www.'] LEGIT: ['s-', 'e-', '-t', 'a-', 'n-', '-s', 't-', '-p']
+PT-Alexa PHISH: ['ht', ':/', 'htt', 'http', 'ttp', '//', '://', 'tp'] LEGIT: ['.c', '.com', '.co', 'com', 'om', 'co', '.i', 'a.']
+Hannousse2021 PHISH: ['php', '.php', '.ph', 'hp', 'pp', 'app', 'o/', 'ph'] LEGIT: ['ww', 's://w', '//www', '//ww', '://ww', '/www.', 'www.', 'ww.']
+PhiUSIIL PHISH: ['p://w', 'p:/', 'p:', 'p://', 'ttp:', 'ttp:/', 'tp://', 'tp:'] LEGIT: ['s://w', 'ww', '/www.', 'www.', 'ww.', '//www', '/www', '://ww']
+Kaggle-MU PHISH: ['ww', 'www', 'www.', 'ww.', 'w.', '://', ':/', '.i'] LEGIT: ['.com/', 'com/', 'om/', 'm/', 's-', 'u/', 'a/', '.net/']

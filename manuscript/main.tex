@@ -1,0 +1,51 @@
+\documentclass[preprint,12pt,authoryear]{elsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{lineno}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks\do\-}
+\usepackage{adjustbox}
+\usepackage{microtype}
+\setlength{\emergencystretch}{2em}
+\usepackage[section]{placeins}
+\linenumbers
+\biboptions{authoryear}
+\journal{Computer Networks}
+\input{macros}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Formatting shortcuts, sampling artefacts and domain leakage in seven public phishing URL benchmarks}
+
+\author{Osman Can \c{C}etlenbik\corref{cor1}}
+\ead{osman.cetlenbik@cbu.edu.tr}
+\cortext[cor1]{Corresponding author.}
+\address{Big Data Analytics Program, Department of Statistics, Manisa Technical Sciences Vocational School, Manisa Celal Bayar University, Manisa 45140, T\"urkiye}
+
+\input{sections/00_abstract}
+
+\end{frontmatter}
+
+\input{sections/01_introduction}
+\input{sections/02_related}
+\input{sections/03_method}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+\FloatBarrier
+\bibliographystyle{elsarticle-harv}
+\bibliography{refs}
+
+\end{document}

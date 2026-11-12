@@ -1,0 +1,23 @@
+\begin{table}[tp]
+\centering
+\caption{Cross-corpus transfer: ROC-AUC (MCC at threshold 0.5) averaged over the test corpora of each training corpus (five for Kaggle-MU, whose ISCX-URL2016 test set is empty after purging), and over all ordered pairs that keep both classes after purging; three seeds. Purging changes the size and class prior of a test set, which affects MCC but not ROC-AUC; per-pair sizes and priors are stored with the results. Test URLs whose canonical form or registered domain occurs anywhere in the full training corpus are removed.}
+\label{tab:pair_domain}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Training corpus & Pres. & Pres.+https & Lexical & Char raw & Char canon. & Char host \\
+\midrule
+Ebbu2017 & 0.522 (0.130) & 0.551 (-0.027) & 0.822 (0.472) & 0.837 (0.413) & 0.815 (0.462) & 0.623 (0.185) \\
+PhishStorm & 0.562 (0.073) & 0.577 (0.073) & 0.782 (0.350) & 0.831 (0.483) & 0.838 (0.522) & 0.679 (0.242) \\
+ISCX-URL2016 & 0.300 (-0.452) & 0.444 (-0.229) & 0.575 (-0.002) & 0.595 (0.168) & 0.743 (0.285) & 0.630 (0.138) \\
+PT-Alexa & 0.511 (0.024) & 0.511 (0.024) & 0.605 (0.187) & 0.533 (0.031) & 0.736 (0.214) & 0.689 (0.242) \\
+Hannousse2021 & 0.546 (0.046) & 0.586 (0.046) & 0.841 (0.542) & 0.823 (0.429) & 0.864 (0.580) & 0.691 (0.253) \\
+PhiUSIIL & 0.531 (-0.020) & 0.544 (0.041) & 0.636 (0.207) & 0.691 (0.080) & 0.769 (0.271) & 0.648 (0.210) \\
+Kaggle-MU & 0.435 (0.192) & 0.512 (-0.038) & 0.592 (0.054) & 0.347 (-0.013) & 0.640 (0.190) & 0.638 (0.175) \\
+\midrule
+All 41 pairs & 0.488 (-0.006) & 0.533 (-0.015) & 0.696 (0.264) & 0.673 (0.233) & 0.775 (0.365) & 0.657 (0.207) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

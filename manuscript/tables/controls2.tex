@@ -1,0 +1,21 @@
+\begin{table}[tp]
+\centering
+\caption{Kaggle-MU subsets and a time split (MCC, mean over seeds). Kaggle-MU rows: random split, 10 seeds, at most 25,000 URLs per class; $n$: legitimate/phishing rows before the cap. Kaggle-MU-clean drops registered domains with both labels and phishing URLs that another corpus labels legitimate; the next row also drops phishing URLs that start with a bare \texttt{www.} (the rule also removes phishing URLs on Alexa top-1,000 domains, but none remain after the first rule). PT-Alexa rows: 3 seeds; $n$: phishing URLs for training/testing, with as many legitimate URLs drawn at random; the time split trains on phishing URLs submitted up to 2019 and tests on 2020 submissions, the matched control draws the same numbers from all years.}
+\label{tab:controls2}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.2cm}rrrrr@{}}
+\toprule
+Control & $n$ & Pres.+https & Char raw & Char canon. & Canon.+https \\
+\midrule
+Kaggle-MU, full & 509,092 in all & 0.513 & 0.885 & 0.745 & -- \\
+Kaggle-MU-clean & 312,932/52,034 & 0.474 & 0.904 & 0.739 & -- \\
+Kaggle-MU-clean without bare-\texttt{www.} phishing & 312,932/37,968 & 0.351 & 0.904 & 0.763 & -- \\
+\midrule
+PT-Alexa, random years (matched) & 2,373/5,000 & 1.000 & 1.000 & 0.898 & 0.924 \\
+PT-Alexa, train $\le$2019, test 2020 & 2,373/5,000 & 1.000 & 1.000 & 0.865 & 0.897 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

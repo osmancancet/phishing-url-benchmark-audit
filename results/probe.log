@@ -1,0 +1,7 @@
+Ebbu2017 {'all': 0.382, 'all+https': 0.529, 'drop_has_scheme': 0.382, 'drop_has_www': 0.212, 'drop_trailing_slash': 0.382, 'drop_html_entity': 0.359, 'drop_upper_in_host': 0.381, 'path_subset': 0.379} [23779, 21306]
+PhishStorm {'all': 0.386, 'all+https': 0.386, 'drop_has_scheme': 0.386, 'drop_has_www': 0.228, 'drop_trailing_slash': 0.386, 'drop_html_entity': 0.359, 'drop_upper_in_host': 0.386, 'path_subset': 0.383} [24920, 24941]
+ISCX-URL2016 {'all': 0.611, 'all+https': 0.617, 'drop_has_scheme': 0.611, 'drop_has_www': 0.251, 'drop_trailing_slash': 0.611, 'drop_html_entity': 0.579, 'drop_upper_in_host': 0.611, 'path_subset': 0.619} [24914, 9366]
+PT-Alexa {'all': 1.0, 'all+https': 1.0, 'drop_has_scheme': 0.529, 'drop_has_www': 1.0, 'drop_trailing_slash': 1.0, 'drop_html_entity': 1.0, 'drop_upper_in_host': 1.0} [0, 11024]
+Hannousse2021 {'all': 0.482, 'all+https': 0.482, 'drop_has_scheme': 0.482, 'drop_has_www': 0.164, 'drop_trailing_slash': 0.482, 'drop_html_entity': 0.471, 'drop_upper_in_host': 0.482, 'path_subset': 0.426} [3501, 4279]
+PhiUSIIL {'all': 0.656, 'all+https': 0.985, 'drop_has_scheme': 0.656, 'drop_has_www': 0.475, 'drop_trailing_slash': 0.64, 'drop_html_entity': 0.654, 'drop_upper_in_host': 0.656} [0, 6743]
+Kaggle-MU {'all': 0.474, 'all+https': 0.513, 'drop_has_scheme': 0.454, 'drop_has_www': 0.176, 'drop_trailing_slash': 0.474, 'drop_html_entity': 0.474, 'drop_upper_in_host': 0.474, 'path_subset': 0.609} [21949, 18349]

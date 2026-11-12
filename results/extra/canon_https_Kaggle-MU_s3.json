@@ -1,0 +1,24 @@
+{
+ "kind": "canon_https",
+ "corpus": "Kaggle-MU",
+ "seed": 3,
+ "runs": {
+  "char_canon_https": {
+   "mcc": 0.7409640165893989,
+   "f1": 0.8729832795541215,
+   "precision": 0.854027166634781,
+   "recall": 0.8928,
+   "fpr": 0.1526,
+   "acc": 0.8701,
+   "tp": 4464,
+   "fp": 763,
+   "tn": 4237,
+   "fn": 536,
+   "auc": 0.94577968,
+   "tpr_at_fpr0.001": 0.136,
+   "fpr_used0.001": 0.001,
+   "tpr_at_fpr0.01": 0.3894,
+   "fpr_used0.01": 0.01
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "kind": "canon_https",
+ "corpus": "PhiUSIIL",
+ "seed": 7,
+ "runs": {
+  "char_canon_https": {
+   "mcc": 0.9668707098917687,
+   "f1": 0.982933766761479,
+   "precision": 0.9987613542526838,
+   "recall": 0.9676,
+   "fpr": 0.0012,
+   "acc": 0.9832,
+   "tp": 4838,
+   "fp": 6,
+   "tn": 4994,
+   "fn": 162,
+   "auc": 0.99654244,
+   "tpr_at_fpr0.001": 0.9646,
+   "fpr_used0.001": 0.001,
+   "tpr_at_fpr0.01": 0.9802,
+   "fpr_used0.01": 0.01
+  }
+ }
+}

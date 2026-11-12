@@ -1,0 +1,7 @@
+{
+ "kind": "loco",
+ "corpus": "ISCX-URL2016",
+ "seed": 2,
+ "n_train": 91070,
+ "runs": []
+}

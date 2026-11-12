@@ -1,0 +1,26 @@
+\begin{table}[tp]
+\centering
+\caption{Test-set error rates and the precision a within-corpus detector would reach at 1\% and 0.1\% phishing prevalence (random split, 10 seeds). Validation threshold: 20\% of the training part is held out, the model is fitted on the rest, and the threshold with the highest validation true-positive rate at a validation false-positive rate of at most 0.1\% is applied to the test part; FPR and TPR are the realised test rates. @0.5: the model fitted on the full training part at threshold 0.5. Rates are pooled over seeds before precision is computed.}
+\label{tab:precision}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrrrrrrrr@{}}
+\toprule
+ & \multicolumn{5}{c}{Char raw} & \multicolumn{5}{c}{Char canon.} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+ & \multicolumn{4}{c}{Validation threshold} & @0.5 & \multicolumn{4}{c}{Validation threshold} & @0.5 \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-6}\cmidrule(lr){7-10}\cmidrule(lr){11-11}
+Corpus & FPR (\%) & TPR & Prec.\ 1\% & Prec.\ 0.1\% & Prec.\ 1\% & FPR (\%) & TPR & Prec.\ 1\% & Prec.\ 0.1\% & Prec.\ 1\% \\
+\midrule
+Ebbu2017 & 0.14 & 0.766 & 0.850 & 0.360 & 0.277 & 0.16 & 0.730 & 0.820 & 0.311 & 0.293 \\
+PhishStorm & 0.12 & 0.753 & 0.862 & 0.382 & 0.279 & 0.11 & 0.712 & 0.869 & 0.398 & 0.265 \\
+ISCX-URL2016 & 0.10 & 0.974 & 0.908 & 0.494 & 0.906 & 0.11 & 0.947 & 0.900 & 0.472 & 0.847 \\
+PT-Alexa & 0.00 & 1.000 & 1.000 & 1.000 & 1.000 & 0.11 & 0.779 & 0.879 & 0.420 & 0.611 \\
+Hannousse2021 & 0.07 & 0.343 & 0.832 & 0.329 & 0.101 & 0.05 & 0.206 & 0.798 & 0.282 & 0.128 \\
+PhiUSIIL & 0.10 & 0.995 & 0.913 & 0.509 & 1.000 & 0.13 & 0.585 & 0.820 & 0.311 & 0.128 \\
+Kaggle-MU & 0.15 & 0.199 & 0.570 & 0.116 & 0.153 & 0.11 & 0.127 & 0.548 & 0.107 & 0.055 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

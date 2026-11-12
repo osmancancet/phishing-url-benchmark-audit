@@ -1,0 +1,9 @@
+{
+ "kind": "homepage",
+ "corpus": "PhishStorm",
+ "seed": 5,
+ "n": [
+  90,
+  60
+ ]
+}

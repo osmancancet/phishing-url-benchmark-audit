@@ -1,0 +1,91 @@
+{
+  "repos": {
+    "pdd": {
+      "url": "https://github.com/ebubekirbbr/pdd",
+      "commit": "90b394d8f9fb5d5dc48400e8bf46b001ce42999f"
+    },
+    "GramBeddings": {
+      "url": "https://github.com/fcdalgic/GramBeddings",
+      "commit": "222157e1a61a01783383d1632269ad13a7542d96"
+    },
+    "PhiUSIIL-UCI-zip": {
+      "url": "https://github.com/AbdulHamidNoubaa/Phishing-Detection-Using-PhiUSIIL-Phishing-URL-Dataset-Website-",
+      "commit": "2d9a1f00a36baa33e997638ad0e8b10542278a59"
+    },
+    "Hannousse-mirror": {
+      "url": "https://github.com/TetianaYaskova/Web-page-Phishing-Detection-Dataset",
+      "commit": "9ba531ffc91985d1da652dbc4585bff057f3ed50"
+    }
+  },
+  "files": {
+    "Ebbu2017": [
+      {
+        "path": "pdd/input/data_legitimate_36400.json",
+        "sha256": "5e8fbcc88d6ba25f46bd85ed48d8aed9f56e2afc9deb712d13496112b8158ab4",
+        "bytes": 2306392
+      },
+      {
+        "path": "pdd/input/data_phishing_37175.json",
+        "sha256": "c513d1f11b0ce159d43a23b465af2a65f752c6f65a816c2a8084f2a2adf2ebf6",
+        "bytes": 3067244
+      }
+    ],
+    "PhishStorm": [
+      {
+        "path": "probe/GramBeddings/data/PhishStorm/valid-urls.csv",
+        "sha256": "382453475373d488a4444da95c6fc856c42733150d91ec7bf10809474f57ba08",
+        "bytes": 2328127
+      },
+      {
+        "path": "probe/GramBeddings/data/PhishStorm/phishing-urls.csv",
+        "sha256": "c2218f2d556ad12e59f45852a7d696157478739aba6c62e7ff0d8269904d4d96",
+        "bytes": 3794507
+      }
+    ],
+    "ISCX-URL2016": [
+      {
+        "path": "probe/GramBeddings/data/ISCXURL2016/Benign_list_big_final.csv",
+        "sha256": "7e0892425caa258918ce5532c7f1249c14273ad817890350dfa9d645c4377650",
+        "bytes": 4104096
+      },
+      {
+        "path": "probe/GramBeddings/data/ISCXURL2016/phishing_dataset.csv",
+        "sha256": "52f7918af584f71da7f43a5cc09a5e4b612da8f8c06e34ddbd11a3736c421136",
+        "bytes": 850205
+      }
+    ],
+    "PT-Alexa": [
+      {
+        "path": "probe/GramBeddings/data/PDRCNN/alexa1m_dataset.csv",
+        "sha256": "3d77bd15304205788d89bbc64f1b73ccd9163e6064183dabe58602e8bdb229f7",
+        "bytes": 11787424
+      },
+      {
+        "path": "probe/GramBeddings/data/PDRCNN/Phishtank_dataset.csv",
+        "sha256": "c76e1ec96e7efea64723b1e3b19117111a4c613a97055bc959840cdcaddad546",
+        "bytes": 3464196
+      }
+    ],
+    "Hannousse2021": [
+      {
+        "path": "probe/Web-page-Phishing-Detection-Dataset/dataset_phishing.csv",
+        "sha256": "21093e2902e5441c86a6daf95e86e7c332046e477fdf109a579d7bd81e586d6c",
+        "bytes": 3661166
+      }
+    ],
+    "PhiUSIIL": [
+      {
+        "path": "probe/Phishing-Detection-Using-PhiUSIIL-Phishing-URL-Dataset-Website-/uci/PhiUSIIL_Phishing_URL_Dataset.csv",
+        "sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+        "bytes": 56854345
+      }
+    ],
+    "Kaggle-MU": [
+      {
+        "path": "probe/GramBeddings/data/kaggle/01-sid321axn/malicious_phish.csv",
+        "sha256": "d83ce942075dd63ed4d11560cfdcd9d512caa3d680e292f22cab484e8f074d01",
+        "bytes": 45664439
+      }
+    ]
+  }
+}

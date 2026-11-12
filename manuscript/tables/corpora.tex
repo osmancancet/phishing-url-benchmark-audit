@@ -1,0 +1,21 @@
+\begin{table}[tp]
+\centering
+\caption{The seven corpora. Year: publication year of the corpus paper or release. Sources are listed only where a checked publication or the construction script documents them (--: not documented). Removed: exact duplicate strings plus strings carrying both labels. Unique: canonical strings with a single label, the unit used in all experiments; Raw $-$ Removed $-$ Unique is the number of canonical duplicates and canonical conflicts (Table~\ref{tab:overlap}). Phish: share of phishing URLs after exact de-duplication (\%).}
+\label{tab:corpora}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lllp{2.4cm}rrrr@{}}
+\toprule
+Corpus & Year & Legitimate source & Phishing source & Raw & Removed & Unique & Phish \\
+\midrule
+Ebbu2017 \citep{sahingoz2019} & 2019 & Yandex search results & PhishTank & 73,575 & 18,812 & 51,721 & 45.4 \\
+PhishStorm \citep{marchal2014} & 2014 & -- & -- & 96,018 & 0 & 85,598 & 50.0 \\
+ISCX-URL2016 \citep{mamun2016} & 2016 & crawl of top domains & -- & 45,343 & 9 & 44,751 & 22.0 \\
+PT-Alexa (this study) & constructed & Alexa top domains & PhishTank dump & 31,506 & 7 & 28,970 & 50.0 \\
+Hannousse2021 \citep{hannousse2021} & 2021 & -- & -- & 11,430 & 1 & 11,070 & 50.0 \\
+PhiUSIIL \citep{prasad2024} & 2024 & -- & -- & 235,795 & 425 & 231,706 & 42.7 \\
+Kaggle-MU \citep{siddhartha2021} & 2021 & -- & -- & 522,214 & 54 & 509,092 & 18.0 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

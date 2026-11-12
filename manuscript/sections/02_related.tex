@@ -1,0 +1,40 @@
+\section{Background and related work}
+\label{sec:related}
+
+\subsection{URL-based phishing detection}
+Early work showed that the URL string alone carries signal. \citet{garera2007} modelled obfuscation patterns in phishing URLs, \citet{ma2009} combined lexical and host-based features in a large-scale classifier, and \citet{blum2010} trained online learners on lexical features. \citet{verma2015} examined character distributions of phishing URLs and the robustness of statistical classifiers. Feature-engineered approaches remain common \citep{mohammad2014,sahingoz2019,hannousse2021}, and the PhiUSIIL framework adds a similarity index and incremental learning \citep{prasad2024}.
+
+Deep models remove manual feature design. Recurrent networks over characters \citep{bahnsen2017}, convolutional networks over characters and words \citep{le2018urlnet,aljofey2020}, combined character and word encoders \citep{tajaddodianfar2020} and n-gram embedding networks \citep{bozkir2023} all report high in-distribution accuracy, as do transformer encoders fine-tuned on URLs \citep{maneriker2021}. Hybrid systems add HTML features to URL features when page content is available \citep{aljofey2022}. Large language models have recently been benchmarked in zero-shot and few-shot settings on PhiUSIIL \citep{hasan2026}; any evaluation that shows a model the raw PhiUSIIL strings inherits the formatting contrast measured in Section~\ref{sec:probe}. Surveys summarise these lines of work \citep{khonji2013,sahoo2017,basit2021,zieni2023,safi2023}.
+
+\subsection{How public URL corpora are built}
+Table~\ref{tab:corpora} lists the seven corpora audited here and the source of each class. They differ in the feed used for phishing URLs and, more strongly, in the population used for legitimate URLs. Popularity lists such as Alexa or Open PageRank give domain names or homepages; search-engine results and crawls give deep pages. Top lists are themselves unstable from day to day, differ between providers and can be manipulated \citep{scheitle2018,lepochat2019}, so a legitimate class drawn from one list inherits that list's population and date. Some corpora also ship pre-computed features \citep{vrbancic2020,hannousse2021,linh2025}. The Kaggle malicious URL collection \citep{siddhartha2021} merges several earlier sources and is among the most used files in applied work.
+
+\subsection{Dataset artefacts, shortcuts and leakage}
+Shortcut learning describes decision rules that succeed on standard benchmarks but fail under realistic shift \citep{geirhos2020}. Natural-language inference datasets contain annotation artefacts that let hypothesis-only models score far above chance \citep{gururangan2018,mccoy2019}, and chest-radiograph models learned hospital-specific markers instead of pathology \citep{zech2018,degrave2021}. Explanation methods expose such ``Clever Hans'' behaviour \citep{lapuschkin2019}, and dataset bias was already measured by cross-dataset generalisation in vision \citep{torralba2011}.
+
+Leakage inflates test scores when information about the test set reaches training \citep{kaufman2012,kapoor2023}. Near-duplicates between training and test files are a common route, as shown for code models \citep{allamanis2019}. In security, \citet{sommer2010} argued that intrusion detection differs from closed-world classification, \citet{pendlebury2019} showed spatial and temporal bias in malware classification, \citet{engelen2021} found labelling and construction errors in CICIDS2017, and \citet{arp2022,arp2024} catalogued ten pitfalls including sampling bias, spurious correlations and inappropriate baselines. Our own earlier work on Turkish phishing e-mail corpora applied a leakage audit to generated text \citep{cetlenbik2026}; the present study concerns a different modality, URLs, and audits third-party corpora rather than a corpus we built.
+
+\subsection{Phishing-specific evaluation studies}
+Several studies question phishing benchmarks directly. \citet{marchal2018} gave design guidelines for realistic evaluation, including diverse legitimate sources, realistic base rates and temporal splits, and reported that a large share of PhishTank entries were not malicious when inspected. \citet{shirazi2018} noted that Alexa-derived legitimate sets contain homepages and that URL length behaves as a dataset-dependent feature. \citet{sanchez2022} showed that models trained on older corpora degrade on real login URLs. Cross-dataset evaluations report sizeable drops \citep{mia2024,yi2026,ahamed2026}, and \citet{rashid2024} attribute part of the drop to path-length and prefix differences, which they reduce by unsupervised domain adaptation. \citet{dalton2025} document label noise, near-duplicates and unrealistic base rates in webpage datasets and release a cleaner benchmark.
+
+These studies establish that phishing benchmarks are biased, and three are close to the present work. \citet{ahamed2026} normalise URLs before training and split by host, but their normalisation keeps the scheme and \texttt{www.} and they do not compare raw with normalised input, so the size of the formatting effect is not measured. \citet{rashid2024} name prefix and path-length differences as one cause of cross-dataset drops and correct for them by domain adaptation, without measuring for each corpus how much of the within-corpus score they explain. \citet{dalton2025} document label noise, near-duplicates and base rates for webpage datasets, whereas we study the URL strings and their recording conventions. None of the studies, to our knowledge, (i) measures for each widely used URL corpus how much separability is available from presentation features alone, (ii) separates presentation, sampling and domain-leakage effects with a controlled intervention and paired statistics, and (iii) accounts for duplicates and cross-corpus label conflicts in the public files themselves. Table~\ref{tab:related} positions the present audit against the closest work.
+
+\begin{table}[t]
+\centering
+\caption{Closest prior work and the questions each addresses. \checkmark: addressed; $\circ$: discussed qualitatively; --: not addressed. Corpora: number of URL corpora evaluated (--: guidelines without experiments). Host-level: canonical hosts only, without a path. \textsuperscript{a}Built domain-name-only features to avoid the bias. \textsuperscript{b}Normalises Unicode, case and IDN and adds a default scheme; scheme and \texttt{www.} are kept and no raw-versus-normalised comparison is made.}
+\label{tab:related}
+\small
+\begin{adjustbox}{max width=\linewidth}\begin{tabular}{@{}lccccc@{}}
+\toprule
+Study & Corpora & Presentation probe & Canonicalisation & Domain-grouped split & Overlap and conflicts \\
+\midrule
+\citet{shirazi2018} & 1 & $\circ$\textsuperscript{a} & -- & -- & -- \\
+\citet{marchal2018} & -- & $\circ$ & -- & $\circ$ & $\circ$ \\
+\citet{rashid2024} & 3 & $\circ$ & -- & -- & -- \\
+\citet{mia2024} & 2 & -- & -- & -- & -- \\
+\citet{ahamed2026} & 2 & -- & $\circ$\textsuperscript{b} & host-level & -- \\
+\citet{dalton2025} & 3 & -- & -- & $\circ$ & $\circ$ \\
+This study & 7 & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}\end{adjustbox}
+\end{table}

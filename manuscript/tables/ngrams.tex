@@ -1,0 +1,19 @@
+\begin{table}[tp]
+\centering
+\caption{Character n-grams with the largest positive (phishing) and negative (legitimate) weights in the raw-string model (seed 0, full training cap).}
+\label{tab:ngrams}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+Corpus & Top phishing n-grams & Top legitimate n-grams \\
+\midrule
+Ebbu2017 & \texttt{e/}, \texttt{php}, \texttt{.php}, \texttt{.ph}, \texttt{x/}, \texttt{hp} & \texttt{.pd}, \texttt{.pdf}, \texttt{pdf}, \texttt{e-}, \texttt{s-}, \texttt{ww} \\
+PhishStorm & \texttt{php}, \texttt{hp}, \texttt{.php}, \texttt{.ph}, \texttt{.com.}, \texttt{ph} & \texttt{ww}, \texttt{://w}, \texttt{//w}, \texttt{.e}, \texttt{//www}, \texttt{://ww} \\
+ISCX-URL2016 & \texttt{ww}, \texttt{/w}, \texttt{w.}, \texttt{/ww}, \texttt{/www}, \texttt{www} & \texttt{s-}, \texttt{e-}, \texttt{-t}, \texttt{a-}, \texttt{n-}, \texttt{-s} \\
+PT-Alexa & \texttt{ht}, \texttt{:/}, \texttt{htt}, \texttt{http}, \texttt{ttp}, \texttt{//} & \texttt{.c}, \texttt{.com}, \texttt{.co}, \texttt{com}, \texttt{om}, \texttt{co} \\
+Hannousse2021 & \texttt{php}, \texttt{.php}, \texttt{.ph}, \texttt{hp}, \texttt{pp}, \texttt{app} & \texttt{ww}, \texttt{s://w}, \texttt{//www}, \texttt{//ww}, \texttt{://ww}, \texttt{/www.} \\
+PhiUSIIL & \texttt{p://w}, \texttt{p:/}, \texttt{p:}, \texttt{p://}, \texttt{ttp:}, \texttt{ttp:/} & \texttt{s://w}, \texttt{ww}, \texttt{/www.}, \texttt{www.}, \texttt{ww.}, \texttt{//www} \\
+Kaggle-MU & \texttt{ww}, \texttt{www}, \texttt{www.}, \texttt{ww.}, \texttt{w.}, \texttt{://} & \texttt{.com/}, \texttt{com/}, \texttt{om/}, \texttt{m/}, \texttt{s-}, \texttt{u/} \\
+\bottomrule
+\end{tabularx}
+\end{table}

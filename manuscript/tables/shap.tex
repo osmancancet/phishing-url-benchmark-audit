@@ -1,0 +1,24 @@
+\begin{table}[tp]
+\centering
+\caption{Feature attribution against two measures of dependence (random split, means over seeds 0--2, 2,000 explained test URLs per seed; MCC: Matthews correlation coefficient). Tree: gradient-boosted trees on the five presentation flags, the https flag, five structure and 19 lexical features, explained with TreeSHAP; Pres., https, Str., Lex.: shares of mean absolute SHAP value per feature group, where the formatting share used in the text is Pres.\ plus https. Char raw: the raw-string n-gram model, explained with linear SHAP (training mean as baseline, features treated as independent, log-odds scale). Own: share of a URL's $|\phi|$ on n-grams present in its raw string but absent from its own canonical string; Sym.: share on n-grams whose training document frequency in raw strings exceeds twice that in canonical strings plus five, whether present in the URL or not. Drop: MCC of the same fitted model on raw minus canonical test input. Loss: MCC of a detector retrained without formatting (the lexical model and the canonical n-gram model of Table~\ref{tab:within_random}, same seeds) subtracted from that of the explained model. Shares and MCC vary by at most 0.019 between seeds.}
+\label{tab:shap}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrrrrrrrrr@{}}
+\toprule
+ & \multicolumn{7}{c}{Tree, 30 features (TreeSHAP)} & \multicolumn{4}{c}{Char raw (linear SHAP)} \\
+\cmidrule(lr){2-8}\cmidrule(lr){9-12}
+Corpus & MCC & Pres. & https & Str. & Lex. & Drop & Loss & Own & Sym. & Drop & Loss \\
+\midrule
+Ebbu2017 & 0.865 & 0.193 & 0.122 & 0.170 & 0.514 & 0.324 & 0.078 & 0.082 & 0.143 & 0.036 & 0.011 \\
+PhishStorm & 0.818 & 0.192 & 0.003 & 0.147 & 0.659 & 0.283 & 0.063 & 0.075 & 0.116 & 0.074 & 0.005 \\
+ISCX-URL2016 & 0.995 & 0.158 & 0.013 & 0.362 & 0.467 & 0.035 & 0.007 & 0.047 & 0.092 & 0.055 & $-$0.001 \\
+PT-Alexa & 1.000 & 1.000 & 0.000 & 0.000 & 0.000 & 1.000 & 0.047 & 0.146 & 0.359 & 0.403 & 0.074 \\
+Hannousse2021 & 0.787 & 0.180 & 0.023 & 0.132 & 0.665 & 0.136 & 0.050 & 0.133 & 0.226 & 0.246 & 0.016 \\
+PhiUSIIL & 0.997 & 0.401 & 0.372 & 0.015 & 0.213 & 0.997 & 0.300 & 0.335 & 0.634 & 0.991 & 0.241 \\
+Kaggle-MU & 0.892 & 0.481 & 0.011 & 0.108 & 0.401 & 0.557 & 0.328 & 0.085 & 0.162 & 0.328 & 0.144 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,7 @@
+Ebbu2017       raw=  73575 (phish=37175) dedup=  54763 phish=24853 legit=29910
+PhishStorm     raw=  96018 (phish=48009) dedup=  96018 phish=48009 legit=48009
+ISCX-URL2016   raw=  45343 (phish=9965) dedup=  45334 phish=9956 legit=35378
+PT-Alexa       raw=  31506 (phish=15753) dedup=  31499 phish=15746 legit=15753
+Hannousse2021  raw=  11430 (phish=5715) dedup=  11429 phish=5714 legit=5715
+PhiUSIIL       raw= 235795 (phish=100945) dedup= 235370 phish=100520 legit=134850
+Kaggle-MU      raw= 522214 (phish=94111) dedup= 522160 phish=94086 legit=428074

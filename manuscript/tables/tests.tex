@@ -1,0 +1,56 @@
+\begin{table}[tp]
+\centering
+\caption{Differences paired by seed over 10 repeated splits: mean MCC and ROC-AUC difference with a 95\% interval that uses the variance correction of \citet{nadeau2003}, and a Holm-adjusted $p$-value from the corrected resampled $t$-test across the seven corpora of each comparison. For the random-versus-grouped comparisons the two settings share the sample of a seed but not the split. Differences smaller than 0.0005 in absolute value print as $+$0.000; small $p$-values for such rows reflect very small seed variance, not a material effect.}
+\label{tab:tests}
+\footnotesize
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Comparison and corpus & $\Delta$MCC [95\% CI] & $p_\mathrm{Holm}$ & $\Delta$AUC [95\% CI] & $p_\mathrm{Holm}$ \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Char raw $-$ canonical (random split)}} \\
+\quad Ebbu2017 & +0.009 [+0.004, +0.014] & 0.012 & +0.001 [+0.001, +0.002] & 0.006 \\
+\quad PhishStorm & +0.006 [+0.002, +0.009] & 0.017 & +0.001 [+0.000, +0.001] & 0.008 \\
+\quad ISCX-URL2016 & $-$0.001 [$-$0.005, +0.003] & 1.000 & +0.000 [+0.000, +0.000] & 0.008 \\
+\quad PT-Alexa & +0.073 [+0.066, +0.080] & $<$0.001 & +0.010 [+0.008, +0.012] & $<$0.001 \\
+\quad Hannousse2021 & +0.006 [$-$0.014, +0.027] & 1.000 & +0.005 [+0.001, +0.010] & 0.028 \\
+\quad PhiUSIIL & +0.240 [+0.234, +0.246] & $<$0.001 & +0.070 [+0.066, +0.073] & $<$0.001 \\
+\quad Kaggle-MU & +0.140 [+0.133, +0.147] & $<$0.001 & +0.038 [+0.037, +0.039] & $<$0.001 \\
+\multicolumn{5}{@{}l}{\emph{Char raw $-$ host view (random split)}} \\
+\quad Ebbu2017 & +0.165 [+0.156, +0.173] & $<$0.001 & +0.040 [+0.037, +0.042] & $<$0.001 \\
+\quad PhishStorm & +0.136 [+0.129, +0.143] & $<$0.001 & +0.033 [+0.031, +0.035] & $<$0.001 \\
+\quad ISCX-URL2016 & +0.007 [+0.003, +0.012] & 0.003 & +0.000 [+0.000, +0.001] & 0.016 \\
+\quad PT-Alexa & +0.299 [+0.282, +0.317] & $<$0.001 & +0.078 [+0.072, +0.085] & $<$0.001 \\
+\quad Hannousse2021 & +0.228 [+0.208, +0.248] & $<$0.001 & +0.086 [+0.077, +0.095] & $<$0.001 \\
+\quad PhiUSIIL & +0.298 [+0.290, +0.307] & $<$0.001 & +0.089 [+0.085, +0.094] & $<$0.001 \\
+\quad Kaggle-MU & +0.264 [+0.252, +0.277] & $<$0.001 & +0.084 [+0.081, +0.087] & $<$0.001 \\
+\multicolumn{5}{@{}l}{\emph{Random $-$ grouped split, char canonical}} \\
+\quad Ebbu2017 & +0.025 [+0.017, +0.033] & $<$0.001 & +0.003 [+0.001, +0.005] & 0.020 \\
+\quad PhishStorm & +0.037 [+0.023, +0.050] & 0.001 & +0.007 [+0.003, +0.010] & 0.017 \\
+\quad ISCX-URL2016 & +0.030 [+0.018, +0.042] & 0.002 & +0.002 [+0.001, +0.002] & 0.004 \\
+\quad PT-Alexa & +0.011 [+0.001, +0.022] & 0.118 & +0.001 [$-$0.002, +0.004] & 0.798 \\
+\quad Hannousse2021 & +0.006 [$-$0.014, +0.026] & 1.000 & +0.005 [+0.001, +0.008] & 0.059 \\
+\quad PhiUSIIL & +0.003 [$-$0.008, +0.014] & 1.000 & +0.001 [$-$0.003, +0.005] & 0.798 \\
+\quad Kaggle-MU & +0.077 [+0.042, +0.111] & 0.003 & +0.027 [+0.012, +0.042] & 0.017 \\
+\multicolumn{5}{@{}l}{\emph{Random $-$ grouped split, lexical}} \\
+\quad Ebbu2017 & +0.025 [+0.004, +0.045] & 0.132 & +0.008 [+0.000, +0.016] & 0.261 \\
+\quad PhishStorm & +0.037 [$-$0.003, +0.077] & 0.267 & +0.013 [+0.000, +0.025] & 0.261 \\
+\quad ISCX-URL2016 & +0.071 [+0.006, +0.136] & 0.182 & +0.005 [+0.000, +0.009] & 0.261 \\
+\quad PT-Alexa & $-$0.001 [$-$0.009, +0.007] & 1.000 & $-$0.000 [$-$0.002, +0.001] & 1.000 \\
+\quad Hannousse2021 & +0.015 [$-$0.006, +0.037] & 0.420 & +0.002 [$-$0.005, +0.009] & 1.000 \\
+\quad PhiUSIIL & $-$0.001 [$-$0.007, +0.005] & 1.000 & +0.001 [$-$0.004, +0.006] & 1.000 \\
+\quad Kaggle-MU & +0.082 [+0.035, +0.129] & 0.023 & +0.061 [+0.036, +0.085] & 0.002 \\
+\multicolumn{5}{@{}l}{\emph{Random $-$ grouped split, char host view}} \\
+\quad Ebbu2017 & +0.222 [+0.201, +0.243] & $<$0.001 & +0.078 [+0.063, +0.093] & $<$0.001 \\
+\quad PhishStorm & +0.193 [+0.116, +0.271] & $<$0.001 & +0.077 [+0.035, +0.119] & 0.005 \\
+\quad ISCX-URL2016 & +0.727 [+0.656, +0.798] & $<$0.001 & +0.208 [+0.144, +0.273] & $<$0.001 \\
+\quad PT-Alexa & +0.298 [+0.266, +0.330] & $<$0.001 & +0.222 [+0.208, +0.236] & $<$0.001 \\
+\quad Hannousse2021 & +0.051 [+0.018, +0.083] & 0.012 & +0.037 [+0.018, +0.055] & 0.004 \\
+\quad PhiUSIIL & +0.012 [$-$0.001, +0.026] & 0.072 & +0.005 [+0.000, +0.010] & 0.033 \\
+\quad Kaggle-MU & +0.189 [+0.146, +0.232] & $<$0.001 & +0.104 [+0.071, +0.137] & $<$0.001 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

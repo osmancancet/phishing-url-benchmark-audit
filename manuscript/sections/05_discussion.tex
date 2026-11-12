@@ -1,0 +1,36 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\input{sections/05a_implications}
+
+\subsection{A reporting checklist for URL benchmarks}
+Table~\ref{tab:checklist} turns the audit into checks that a benchmark paper can run with the audit code. None of them requires page content or access to the original collection pipeline, and the full set ran in \RunMinutes{} minutes for all seven corpora on four CPU cores. The last column gives the action we suggest when a check fails; the thresholds are judgement calls informed by the spread of our results, not statistical cut-offs.
+
+\begin{table}[tp]
+\centering
+\caption{Checks recommended before reporting results on a URL corpus, with a suggested action when a check fails. The audit code implements C1 to C5, C7, C8 and the transfer part of C6; the time-ordered split of C6 is implemented only for the PhishTank dump, the one source with submission times.}
+\label{tab:checklist}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Check & What to report & Action if it fails \\
+\midrule
+C1 Duplicates and containment & Exact and canonical duplicate counts, strings carrying both labels, and the share of the corpus contained in other benchmark corpora. & De-duplicate canonically before splitting; do not count contained corpora as independent evidence. \\
+C2 Presentation probe & MCC of a classifier on presentation flags only, with and without the scheme type, and the per-flag ablation. & If the probe is high, run C3 and C4 before interpreting any raw-string score. \\
+C3 Canonical input & Results on canonical strings next to raw-string results, with paired differences over repeated splits and a corrected test. & If the drop exceeds a few hundredths of MCC, report canonical results as the primary numbers. \\
+C4 Sampling probe & Structure-only and host-only results, and the probe on path and homepage subsets. & If one class has no paths, say so and report homepage-subset results. \\
+C5 Domain grouping & Share of test URLs whose registered domain occurs in training, and results under a stratified split grouped by registered domain. & Report grouped results as primary for host-weighted detectors. \\
+C6 Transfer and time & ROC-AUC on at least one other corpus after purging test URLs against the full training corpus by canonical URL and by registered domain, and a time-ordered split where collection dates exist. & Check whether a good transfer result rests on a convention shared with the test corpus (C2 on both). \\
+C7 Operating point & Precision at a realistic prevalence at the reported threshold and at a threshold set on validation data for a fixed low false-positive rate, with the realised test rate. & Report the threshold and how it was chosen. \\
+C8 Provenance & Mirror or archive version, file digests and the upstream chain, because public copies of one corpus differ in presentation. & Name the exact copy used. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Threats to validity}
+\label{sec:threats}
+\paragraph{Construct validity} The boundary between artefact and signal is not sharp. The \texttt{https} flag is partly a real property whose prevalence among phishing URLs rose over the years these corpora span (in the PhishTank dump behind PT-Alexa from \PTHttpsEarly\% of submissions up to 2017 to \PTHttpsTwenty\% in 2020), so a scheme-type contrast mixes collection year with collection pipeline; we report every probe with and without it. The PhishTank series describes the submitted URL, often the lure link of a message, not necessarily the landing page, and it is therefore the view of a mail gateway rather than of a browser. On PhiUSIIL the flag cannot be read as a server property at all, because every legitimate string carries the same \texttt{https://www.} prefix, which is a curator's template. A missing \texttt{www.} or scheme is not equivalent to its presence under the URI standard \citep{rfc3986}, and we claim only that in these corpora such differences mainly track the pipeline. Canonicalisation keeps userinfo, ports, path, query and fragment, so it removes no attacker-controlled content beyond the formatting flags, but a phishing campaign that prefers \texttt{http://} or omits \texttt{www.} would lose a weak genuine cue. Structure features are not pure artefact either, since phishing pages do sit deeper in sites, and the fragment we keep is partly a pipeline property too, because crawls rarely record fragments while feeds store what reporters pasted. The canonicaliser drops ports 80 and 443 whatever the scheme, treats a defanged scheme such as \texttt{hxxp://} as a scheme, and does not normalise hexadecimal or decimal IP hosts. Internationalised host names are not converted between Unicode and punycode, so a feed that stores one form and a crawl that stores the other would differ in a property we do not audit.
+
+\paragraph{Internal validity} No corpus in this study was collected by one pipeline for both classes, so we have no positive control in which the probe should fall to chance. The path and homepage subsets are the closest substitutes: they remove the sampling contrast but not the collection pipeline. Corpora are capped at 25,000 URLs per class, which changes the class ratio of several corpora (Table~\ref{tab:corpora} gives the original ratios); for Hannousse2021 and PT-Alexa the cap exceeds the class sizes, so their ten seeds vary only the split. The registered-domain grouping relies on a Public Suffix List snapshot, and URL shorteners or hosting providers outside its private section can place unrelated URLs in one group, which makes the grouped split conservative. The CNN is a single architecture trained with three seeds, fixed hyper-parameters and a fixed number of epochs. The Kaggle-MU-clean subset removes rows by rules we chose after seeing the conflicts, so it is a sensitivity check, not a corrected corpus.
+
+\paragraph{External validity} We audit public mirrors, not the original releases, and copies of one corpus differ in the properties we measure (Section~\ref{sec:corpora}); results for a corpus hold for the named mirror and commit. Phishing feeds themselves contain entries that are not phishing pages \citep{marchal2018}, which adds label noise we cannot measure. All corpora are balanced or close to balanced, while deployment base rates are far lower \citep{marchal2018,dalton2025}; the precision conversion in Section~\ref{sec:canon} is an estimate that assumes the false-positive rate of the test split carries over to live traffic. The corpora span 2014 to 2024. We model time through the publication-year ordering of transfer pairs, a proxy that misplaces corpora such as Kaggle-MU that reuse older collections, and through one time split of the PhishTank dump, the only source with submission times; collection windows inside the other corpora are mostly undocumented. Phishing URLs are short-lived and blocklists react within hours to days \citep{oest2020phishtime,oest2020sunrise}, so a snapshot of a feed can over-represent campaigns that stayed online long enough to be reported and verified.

@@ -1,0 +1,24 @@
+{
+ "kind": "canon_https",
+ "corpus": "PhishStorm",
+ "seed": 7,
+ "runs": {
+  "char_canon_https": {
+   "mcc": 0.916620872599096,
+   "f1": 0.9572127139364304,
+   "precision": 0.9754983388704319,
+   "recall": 0.9396,
+   "fpr": 0.0236,
+   "acc": 0.958,
+   "tp": 4698,
+   "fp": 118,
+   "tn": 4882,
+   "fn": 302,
+   "auc": 0.99252016,
+   "tpr_at_fpr0.001": 0.7898,
+   "fpr_used0.001": 0.001,
+   "tpr_at_fpr0.01": 0.9078,
+   "fpr_used0.01": 0.01
+  }
+ }
+}

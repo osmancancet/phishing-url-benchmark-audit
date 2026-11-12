@@ -1,0 +1,23 @@
+\begin{table}[tp]
+\centering
+\caption{Controls (MCC, random split, mean over 10 seeds). Homepage subset: only URLs without a path, so that both classes are sampled at the same granularity; $n$: legitimate and phishing homepages in the capped sample; --: fewer than 500 such URLs in one class. Full corpus: the canonical model of Table~\ref{tab:within_random} and the same model with a token for an explicit \texttt{https} scheme prepended to the canonical string.}
+\label{tab:controls}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & \multicolumn{4}{c}{Homepage subset (no path in either class)} & \multicolumn{2}{c}{Full corpus} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-7}
+Corpus & $n$ (L/P) & Pres.+https & Char raw & Char canon. & Char canon. & Canon.+https \\
+\midrule
+Ebbu2017 & 1,248/509 & 0.464 & 0.779 & 0.721 & 0.933 & 0.942 \\
+PhishStorm & 90/60 & -- & -- & -- & 0.919 & 0.919 \\
+ISCX-URL2016 & 81/370 & -- & -- & -- & 0.985 & 0.987 \\
+PT-Alexa & 15,753/2,193 & 1.000 & 0.999 & 0.698 & 0.927 & 0.947 \\
+Hannousse2021 & 2,213/1,077 & 0.556 & 0.783 & 0.708 & 0.820 & 0.828 \\
+PhiUSIIL & 25,000/18,433 & 0.996 & 0.991 & 0.709 & 0.751 & 0.967 \\
+Kaggle-MU & 3,033/6,607 & 0.933 & 0.925 & 0.503 & 0.745 & 0.751 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

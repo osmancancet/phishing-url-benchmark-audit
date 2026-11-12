@@ -1,0 +1,22 @@
+{
+ "mcc": 1.0,
+ "f1": 1.0,
+ "precision": 1.0,
+ "recall": 1.0,
+ "fpr": 0.0,
+ "acc": 1.0,
+ "tp": 2643,
+ "fp": 0,
+ "tn": 3151,
+ "fn": 0,
+ "auc": 1.0,
+ "tpr_at_fpr0.001": 1.0,
+ "fpr_used0.001": 0.0,
+ "tpr_at_fpr0.01": 1.0,
+ "fpr_used0.01": 0.0,
+ "corpus": "PT-Alexa",
+ "seed": 2,
+ "view": "raw",
+ "split": "random",
+ "sec": 225.2
+}

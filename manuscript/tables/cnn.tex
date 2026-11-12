@@ -1,0 +1,23 @@
+\begin{table}[tp]
+\centering
+\caption{Character-level CNN (URLNet character branch) against the character n-gram logistic regression (LR): MCC, mean (standard deviation) over seeds 0--2 for the CNN and mean over seeds 0--9 for LR, same caps and split procedure. The CNN is trained for a fixed five epochs without a validation set.}
+\label{tab:cnn}
+\footnotesize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{Random split} & \multicolumn{3}{c}{Grouped split} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Corpus & CNN raw & CNN canon. & LR raw / canon. & CNN raw & CNN canon. & LR raw / canon. \\
+\midrule
+Ebbu2017 & 0.923 (0.006) & 0.901 (0.005) & 0.943 / 0.933 & 0.907 (0.015) & 0.879 (0.020) & 0.924 / 0.908 \\
+PhishStorm & 0.901 (0.006) & 0.885 (0.004) & 0.925 / 0.919 & 0.862 (0.034) & 0.832 (0.045) & 0.894 / 0.883 \\
+ISCX-URL2016 & 0.987 (0.001) & 0.983 (0.003) & 0.984 / 0.985 & 0.934 (0.050) & 0.885 (0.108) & 0.962 / 0.955 \\
+PT-Alexa & 1.000 (0.000) & 0.948 (0.006) & 1.000 / 0.927 & 1.000 (0.000) & 0.946 (0.005) & 1.000 / 0.916 \\
+Hannousse2021 & 0.777 (0.017) & 0.751 (0.009) & 0.826 / 0.820 & 0.766 (0.020) & 0.749 (0.027) & 0.816 / 0.814 \\
+PhiUSIIL & 0.997 (0.001) & 0.751 (0.003) & 0.991 / 0.751 & 0.997 (0.001) & 0.753 (0.007) & 0.990 / 0.748 \\
+Kaggle-MU & 0.893 (0.004) & 0.679 (0.005) & 0.885 / 0.745 & 0.833 (0.022) & 0.607 (0.025) & 0.850 / 0.669 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

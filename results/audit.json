@@ -1,0 +1,620 @@
+{
+ "Ebbu2017": {
+  "n_raw": 73575,
+  "n_raw_phish": 37175,
+  "exact_dup_removed": 18812,
+  "exact_dup_removed_legit": 6490,
+  "exact_dup_removed_phish": 12322,
+  "raw_label_conflicts": 0,
+  "n": 54763,
+  "n_phish": 24853,
+  "n_legit": 29910,
+  "canon_unique": 51721,
+  "canon_dup_rows": 3042,
+  "canon_label_conflict_keys": 0,
+  "reg_domains": 21649,
+  "reg_domains_legit": 12735,
+  "reg_domains_phish": 8930,
+  "reg_domains_both_labels": 16,
+  "rows_in_mixed_domains": 754,
+  "urls_per_domain_phish": 2.783090705487122,
+  "urls_per_domain_legit": 2.348645465253239,
+  "pres_legit": {
+   "has_scheme": 1.0,
+   "has_www": 0.5881310598462053,
+   "trailing_slash": 0.2691073219658977,
+   "html_entity": 0.0,
+   "upper_in_host": 0.004647275158809762,
+   "is_https": 0.3614844533600802
+  },
+  "struct_legit": {
+   "has_path": 0.9501504513540622,
+   "path_depth": 2.1985289200936142,
+   "has_query": 0.043162821798729524,
+   "n_params": 0.05593447007689736,
+   "url_len": 45.0
+  },
+  "pres_phish": {
+   "has_scheme": 0.9967005995252082,
+   "has_www": 0.26145736933167024,
+   "trailing_slash": 0.39773870357703295,
+   "html_entity": 0.08461755120106225,
+   "upper_in_host": 0.00028165613809198086,
+   "is_https": 0.020279241942622622
+  },
+  "struct_phish": {
+   "has_path": 0.9776686919084215,
+   "path_depth": 3.278316501026033,
+   "has_query": 0.20834506900575384,
+   "n_params": 0.6431819096286162,
+   "url_len": 50.0
+  },
+  "largest_group_legit": [
+   "wikipedia.org",
+   1341,
+   0.044834503510531594
+  ],
+  "largest_group_phish": [
+   "esy.es",
+   228,
+   0.009173942783567377
+  ],
+  "phish_on_alexa_top1k": 0.0020520661489558606,
+  "home_slash_legit": 0.9470154258886653,
+  "home_slash_phish": 0.6576576576576577
+ },
+ "PhishStorm": {
+  "n_raw": 96018,
+  "n_raw_phish": 48009,
+  "exact_dup_removed": 0,
+  "exact_dup_removed_legit": 0,
+  "exact_dup_removed_phish": 0,
+  "raw_label_conflicts": 0,
+  "n": 96018,
+  "n_phish": 48009,
+  "n_legit": 48009,
+  "canon_unique": 85598,
+  "canon_dup_rows": 10420,
+  "canon_label_conflict_keys": 0,
+  "reg_domains": 31044,
+  "reg_domains_legit": 17340,
+  "reg_domains_phish": 13756,
+  "reg_domains_both_labels": 52,
+  "rows_in_mixed_domains": 3987,
+  "urls_per_domain_phish": 3.490040709508578,
+  "urls_per_domain_legit": 2.7686851211072665,
+  "pres_legit": {
+   "has_scheme": 1.0,
+   "has_www": 0.6798308650461372,
+   "trailing_slash": 0.35814118186173427,
+   "html_entity": 4.165885563123581e-05,
+   "upper_in_host": 0.0,
+   "is_https": 0.02205836405673936
+  },
+  "struct_legit": {
+   "has_path": 0.9966464621216855,
+   "path_depth": 2.0929200774854713,
+   "has_query": 0.07748547147409861,
+   "n_params": 0.1224978649836489,
+   "url_len": 34.0
+  },
+  "pres_phish": {
+   "has_scheme": 0.9997708762940282,
+   "has_www": 0.3453935720385761,
+   "trailing_slash": 0.3548084734112354,
+   "html_entity": 0.08044325022391635,
+   "upper_in_host": 0.0002499531337874149,
+   "is_https": 0.014184840342435794
+  },
+  "struct_phish": {
+   "has_path": 0.9982294986356725,
+   "path_depth": 3.3545793497052636,
+   "has_query": 0.17988293861567622,
+   "n_params": 0.5625195275885772,
+   "url_len": 53.0
+  },
+  "largest_group_legit": [
+   "wikipedia.org",
+   1864,
+   0.038826053448311776
+  ],
+  "largest_group_phish": [
+   "mhcable.com",
+   369,
+   0.007686058863963007
+  ],
+  "phish_on_alexa_top1k": 0.006894540606969527,
+  "home_slash_legit": 0.012422360248447204,
+  "home_slash_phish": 0.11764705882352941
+ },
+ "ISCX-URL2016": {
+  "n_raw": 45343,
+  "n_raw_phish": 9965,
+  "exact_dup_removed": 9,
+  "exact_dup_removed_legit": 0,
+  "exact_dup_removed_phish": 9,
+  "raw_label_conflicts": 0,
+  "n": 45334,
+  "n_phish": 9956,
+  "n_legit": 35378,
+  "canon_unique": 44751,
+  "canon_dup_rows": 583,
+  "canon_label_conflict_keys": 0,
+  "reg_domains": 4460,
+  "reg_domains_legit": 307,
+  "reg_domains_phish": 4154,
+  "reg_domains_both_labels": 1,
+  "rows_in_mixed_domains": 425,
+  "urls_per_domain_phish": 2.3967260471834377,
+  "urls_per_domain_legit": 115.23778501628665,
+  "pres_legit": {
+   "has_scheme": 1.0,
+   "has_www": 0.0038724631126688903,
+   "trailing_slash": 0.1945559387189779,
+   "html_entity": 2.8266154107072193e-05,
+   "upper_in_host": 0.0,
+   "is_https": 0.055119000508790775
+  },
+  "struct_legit": {
+   "has_path": 0.9965797953530443,
+   "path_depth": 3.333088359997739,
+   "has_query": 0.27347504098592346,
+   "n_params": 0.7363333144892306,
+   "url_len": 94.0
+  },
+  "pres_phish": {
+   "has_scheme": 0.997790277219767,
+   "has_www": 0.42185616713539575,
+   "trailing_slash": 0.3890116512655685,
+   "html_entity": 0.08497388509441543,
+   "upper_in_host": 0.0004017677782241864,
+   "is_https": 0.017276014463640015
+  },
+  "struct_phish": {
+   "has_path": 0.9624347127360385,
+   "path_depth": 2.773101647247891,
+   "has_query": 0.18692245881880273,
+   "n_params": 0.3963439132181599,
+   "url_len": 59.0
+  },
+  "largest_group_legit": [
+   "torcache.net",
+   1367,
+   0.038639832664367685
+  ],
+  "largest_group_phish": [
+   "pastehtml.com",
+   944,
+   0.094817195660908
+  ],
+  "phish_on_alexa_top1k": 0.01476496584973885,
+  "home_slash_legit": 0.0,
+  "home_slash_phish": 0.8689839572192514
+ },
+ "PT-Alexa": {
+  "n_raw": 31506,
+  "n_raw_phish": 15753,
+  "exact_dup_removed": 7,
+  "exact_dup_removed_legit": 0,
+  "exact_dup_removed_phish": 7,
+  "raw_label_conflicts": 0,
+  "n": 31499,
+  "n_phish": 15746,
+  "n_legit": 15753,
+  "canon_unique": 28970,
+  "canon_dup_rows": 2529,
+  "canon_label_conflict_keys": 0,
+  "reg_domains": 21725,
+  "reg_domains_legit": 15553,
+  "reg_domains_phish": 6253,
+  "reg_domains_both_labels": 81,
+  "rows_in_mixed_domains": 1444,
+  "urls_per_domain_phish": 2.5181512873820564,
+  "urls_per_domain_legit": 1.0128592554491096,
+  "pres_legit": {
+   "has_scheme": 0.0,
+   "has_www": 0.0005713197486193106,
+   "trailing_slash": 0.0,
+   "html_entity": 0.0,
+   "upper_in_host": 0.0,
+   "is_https": 0.0
+  },
+  "struct_legit": {
+   "has_path": 0.0,
+   "path_depth": 0.0,
+   "has_query": 0.0,
+   "n_params": 0.0,
+   "url_len": 12.0
+  },
+  "pres_phish": {
+   "has_scheme": 1.0,
+   "has_www": 0.12822304077225963,
+   "trailing_slash": 0.2721326051060587,
+   "html_entity": 0.11253651721072018,
+   "upper_in_host": 0.00025403277022735933,
+   "is_https": 0.4705957068461832
+  },
+  "struct_phish": {
+   "has_path": 0.8307506668360218,
+   "path_depth": 2.6063762225327065,
+   "has_query": 0.2686396545154325,
+   "n_params": 0.6290486472754986,
+   "url_len": 52.0
+  },
+  "largest_group_legit": [
+   "tmall.com",
+   135,
+   0.00856979622928966
+  ],
+  "largest_group_phish": [
+   "google.com",
+   462,
+   0.029340784961260004
+  ],
+  "phish_on_alexa_top1k": 0.04280452178331005,
+  "home_slash_legit": 0.0,
+  "home_slash_phish": 0.7069418386491557
+ },
+ "Hannousse2021": {
+  "n_raw": 11430,
+  "n_raw_phish": 5715,
+  "exact_dup_removed": 1,
+  "exact_dup_removed_legit": 0,
+  "exact_dup_removed_phish": 1,
+  "raw_label_conflicts": 0,
+  "n": 11429,
+  "n_phish": 5714,
+  "n_legit": 5715,
+  "canon_unique": 11070,
+  "canon_dup_rows": 359,
+  "canon_label_conflict_keys": 0,
+  "reg_domains": 7260,
+  "reg_domains_legit": 4103,
+  "reg_domains_phish": 3174,
+  "reg_domains_both_labels": 17,
+  "rows_in_mixed_domains": 397,
+  "urls_per_domain_phish": 1.8002520478890989,
+  "urls_per_domain_legit": 1.3928832561540336,
+  "pres_legit": {
+   "has_scheme": 1.0,
+   "has_www": 0.6678915135608049,
+   "trailing_slash": 0.45301837270341205,
+   "html_entity": 0.0,
+   "upper_in_host": 0.0031496062992125984,
+   "is_https": 0.44496937882764653
+  },
+  "struct_legit": {
+   "has_path": 0.6125984251968504,
+   "path_depth": 1.3674540682414698,
+   "has_query": 0.03342082239720035,
+   "n_params": 0.0552930883639545,
+   "url_len": 31.0
+  },
+  "pres_phish": {
+   "has_scheme": 1.0,
+   "has_www": 0.2054602730136507,
+   "trailing_slash": 0.29698984949247464,
+   "html_entity": 0.041827091354567726,
+   "upper_in_host": 0.00017500875043752187,
+   "is_https": 0.33321666083304163
+  },
+  "struct_phish": {
+   "has_path": 0.8017150857542877,
+   "path_depth": 2.291739586979349,
+   "has_query": 0.2367868393419671,
+   "n_params": 0.5280014000700035,
+   "url_len": 46.0
+  },
+  "largest_group_legit": [
+   "wikipedia.org",
+   177,
+   0.030971128608923884
+  ],
+  "largest_group_phish": [
+   "duilawyeryork.com",
+   351,
+   0.06142807140357018
+  ],
+  "phish_on_alexa_top1k": 0.04060203010150507,
+  "home_slash_legit": 0.8238482384823849,
+  "home_slash_phish": 0.675198587819947
+ },
+ "PhiUSIIL": {
+  "n_raw": 235795,
+  "n_raw_phish": 100945,
+  "exact_dup_removed": 425,
+  "exact_dup_removed_legit": 0,
+  "exact_dup_removed_phish": 425,
+  "raw_label_conflicts": 0,
+  "n": 235370,
+  "n_phish": 100520,
+  "n_legit": 134850,
+  "canon_unique": 231749,
+  "canon_dup_rows": 3621,
+  "canon_label_conflict_keys": 43,
+  "reg_domains": 197709,
+  "reg_domains_legit": 132186,
+  "reg_domains_phish": 65629,
+  "reg_domains_both_labels": 106,
+  "rows_in_mixed_domains": 606,
+  "urls_per_domain_phish": 1.5316399762300204,
+  "urls_per_domain_legit": 1.0201534201806546,
+  "pres_legit": {
+   "has_scheme": 1.0,
+   "has_www": 1.0,
+   "trailing_slash": 0.0,
+   "html_entity": 0.0,
+   "upper_in_host": 0.0,
+   "is_https": 1.0
+  },
+  "struct_legit": {
+   "has_path": 0.0,
+   "path_depth": 0.0,
+   "has_query": 0.0,
+   "n_params": 0.0,
+   "url_len": 15.0
+  },
+  "pres_phish": {
+   "has_scheme": 1.0,
+   "has_www": 0.41502188619180264,
+   "trailing_slash": 0.36335057699960205,
+   "html_entity": 0.011549940310385993,
+   "upper_in_host": 0.0,
+   "is_https": 0.48632113012335854
+  },
+  "struct_phish": {
+   "has_path": 0.27137883008356545,
+   "path_depth": 0.5869578193394349,
+   "has_query": 0.06039594110624751,
+   "n_params": 0.1426382809391166,
+   "url_len": 25.0
+  },
+  "largest_group_legit": [
+   "af.mil",
+   124,
+   0.0009195402298850574
+  ],
+  "largest_group_phish": [
+   "weeblysite.com",
+   3079,
+   0.030630720254675687
+  ],
+  "phish_on_alexa_top1k": 0.015360127337843215,
+  "home_slash_legit": 0.0,
+  "home_slash_phish": 0.4311519504102893
+ },
+ "Kaggle-MU": {
+  "n_raw": 522214,
+  "n_raw_phish": 94111,
+  "exact_dup_removed": 42,
+  "exact_dup_removed_legit": 23,
+  "exact_dup_removed_phish": 19,
+  "raw_label_conflicts": 12,
+  "n": 522160,
+  "n_phish": 94086,
+  "n_legit": 428074,
+  "canon_unique": 513063,
+  "canon_dup_rows": 9097,
+  "canon_label_conflict_keys": 3971,
+  "reg_domains": 153980,
+  "reg_domains_legit": 111801,
+  "reg_domains_phish": 46492,
+  "reg_domains_both_labels": 4313,
+  "rows_in_mixed_domains": 141528,
+  "urls_per_domain_phish": 2.0237030026671254,
+  "urls_per_domain_legit": 3.8288924070446595,
+  "pres_legit": {
+   "has_scheme": 0.08264458948686441,
+   "has_www": 0.03090119932535029,
+   "trailing_slash": 0.25973780234258564,
+   "html_entity": 0.01663731037157127,
+   "upper_in_host": 0.0001238103692352257,
+   "is_https": 0.004555287169975285
+  },
+  "struct_legit": {
+   "has_path": 0.8780164177221695,
+   "path_depth": 2.2157103678335988,
+   "has_query": 0.16991921957418576,
+   "n_params": 0.31300195760546073,
+   "url_len": 45.0
+  },
+  "pres_phish": {
+   "has_scheme": 0.2639606317624301,
+   "has_www": 0.3874327742703484,
+   "trailing_slash": 0.27366451969474737,
+   "html_entity": 0.03147120719341879,
+   "upper_in_host": 0.0009246859256424973,
+   "is_https": 0.07401738834683162
+  },
+  "struct_phish": {
+   "has_path": 0.7458495419084668,
+   "path_depth": 1.7468805135726888,
+   "has_query": 0.08654847692536616,
+   "n_params": 0.17102438194843017,
+   "url_len": 31.0
+  },
+  "largest_group_legit": [
+   "wikipedia.org",
+   12874,
+   0.030074239500647085
+  ],
+  "largest_group_phish": [
+   "ietf.org",
+   3212,
+   0.03413897923176668
+  ],
+  "phish_on_alexa_top1k": 0.05669281295835725,
+  "home_slash_legit": 0.9066796889961316,
+  "home_slash_phish": 0.07485781197724992
+ },
+ "_cross": {
+  "Ebbu2017|PhishStorm": {
+   "shared_canonical_urls": 2629,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 2600,
+   "reg_domains_opposite_pure_label": 27
+  },
+  "Ebbu2017|ISCX-URL2016": {
+   "shared_canonical_urls": 18,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 181,
+   "reg_domains_opposite_pure_label": 11
+  },
+  "Ebbu2017|PT-Alexa": {
+   "shared_canonical_urls": 134,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 1730,
+   "reg_domains_opposite_pure_label": 15
+  },
+  "Ebbu2017|Hannousse2021": {
+   "shared_canonical_urls": 4008,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 2451,
+   "reg_domains_opposite_pure_label": 11
+  },
+  "Ebbu2017|PhiUSIIL": {
+   "shared_canonical_urls": 129,
+   "shared_canonical_conflicting_label": 7,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 7,
+   "shared_reg_domains": 2148,
+   "reg_domains_opposite_pure_label": 66
+  },
+  "Ebbu2017|Kaggle-MU": {
+   "shared_canonical_urls": 240,
+   "shared_canonical_conflicting_label": 43,
+   "conflict_a_phish_b_legit": 7,
+   "conflict_a_legit_b_phish": 36,
+   "shared_reg_domains": 3660,
+   "reg_domains_opposite_pure_label": 502
+  },
+  "ISCX-URL2016|PhishStorm": {
+   "shared_canonical_urls": 91,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 260,
+   "reg_domains_opposite_pure_label": 23
+  },
+  "ISCX-URL2016|PT-Alexa": {
+   "shared_canonical_urls": 8,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 290,
+   "reg_domains_opposite_pure_label": 37
+  },
+  "ISCX-URL2016|PhiUSIIL": {
+   "shared_canonical_urls": 0,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 103,
+   "reg_domains_opposite_pure_label": 15
+  },
+  "ISCX-URL2016|Kaggle-MU": {
+   "shared_canonical_urls": 40790,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 3279,
+   "reg_domains_opposite_pure_label": 446
+  },
+  "PT-Alexa|PhishStorm": {
+   "shared_canonical_urls": 88,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 1091,
+   "reg_domains_opposite_pure_label": 50
+  },
+  "PT-Alexa|PhiUSIIL": {
+   "shared_canonical_urls": 2078,
+   "shared_canonical_conflicting_label": 35,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 35,
+   "shared_reg_domains": 2506,
+   "reg_domains_opposite_pure_label": 129
+  },
+  "Hannousse2021|PhishStorm": {
+   "shared_canonical_urls": 223,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 582,
+   "reg_domains_opposite_pure_label": 12
+  },
+  "Hannousse2021|ISCX-URL2016": {
+   "shared_canonical_urls": 7,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 63,
+   "reg_domains_opposite_pure_label": 4
+  },
+  "Hannousse2021|PT-Alexa": {
+   "shared_canonical_urls": 2984,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 2571,
+   "reg_domains_opposite_pure_label": 9
+  },
+  "Hannousse2021|PhiUSIIL": {
+   "shared_canonical_urls": 218,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 812,
+   "reg_domains_opposite_pure_label": 30
+  },
+  "Hannousse2021|Kaggle-MU": {
+   "shared_canonical_urls": 2535,
+   "shared_canonical_conflicting_label": 6,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 6,
+   "shared_reg_domains": 2474,
+   "reg_domains_opposite_pure_label": 110
+  },
+  "PhiUSIIL|PhishStorm": {
+   "shared_canonical_urls": 3,
+   "shared_canonical_conflicting_label": 0,
+   "conflict_a_phish_b_legit": 0,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 2669,
+   "reg_domains_opposite_pure_label": 71
+  },
+  "Kaggle-MU|PhishStorm": {
+   "shared_canonical_urls": 2392,
+   "shared_canonical_conflicting_label": 2112,
+   "conflict_a_phish_b_legit": 2061,
+   "conflict_a_legit_b_phish": 51,
+   "shared_reg_domains": 5669,
+   "reg_domains_opposite_pure_label": 1906
+  },
+  "Kaggle-MU|PT-Alexa": {
+   "shared_canonical_urls": 5477,
+   "shared_canonical_conflicting_label": 6,
+   "conflict_a_phish_b_legit": 6,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 4893,
+   "reg_domains_opposite_pure_label": 194
+  },
+  "Kaggle-MU|PhiUSIIL": {
+   "shared_canonical_urls": 1229,
+   "shared_canonical_conflicting_label": 11,
+   "conflict_a_phish_b_legit": 11,
+   "conflict_a_legit_b_phish": 0,
+   "shared_reg_domains": 7987,
+   "reg_domains_opposite_pure_label": 1309
+  }
+ }
+}
